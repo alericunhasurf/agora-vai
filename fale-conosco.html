@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Tudo sobre google glass</title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="_css/specs.css" />
+
+</head>
+<script language="javascript" src="_javascript/funcoes.js"></script>
+
+<body>
+    <div id="interface">
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A Revolução do Google esta chegando</h2>
+            </hgroup>
+            <img id="icone" src="_imagens/especificacoes.png" />
+            <nav id="menu">
+
+                <ul type="disc">
+                    <li onmousemove="mudaFoto('_imagens/Home.png')" onmouseout="mudaFoto" ( '_imagens/especificacoes.png')><a href="index.html">Home</a> </li>
+                    <li onmousemove="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto" ( '_imagens/especificacoes.png')><a href="specs.html">especificações</a></li>
+                    <li onmousemove="mudaFoto('_imagens/Fotos.png')" onmouseout="mudaFoto" ( '_imagens/especificacoes.png')><a href="fotos.html">Fotos</a></li>
+                    <li onmousemove="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto" ( '_imagens/especificacoes.png')><a href="multimidia.html">Multimídia</a></li>
+                    <li onmousemove="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto" ( '_imagens/especificacoes.png')><a href="fale-conosco.html">Fale conosco</a></li>
+
+                </ul>
+            </nav>
+        </header>
+
+
+
+        <form method="POST" id="fcontato" action="mailto:contato@cursoemvideo.com">
+            <fieldset id="usuario">
+                <legend>Identificação do Usuário</legend>
+                <p> <label for="cnome">Nome:</label> <input type="text" name="tnome" id="cnome" size="20" maxlength="30" placeholder="nome Completo"> </p>
+                <p> <label for="csenha">Senha:</label> <input type="password" name="tsenha" id="csenha" size="8" maxlength="8" placeholder="8d  digitos"> </p>
+                <p> <label for="cemail">E-mail:</label> <input type="email" name="temail" id="cemail" size="8" maxlength="8" placeholder="E-mail"></p>
+                <fieldset id="sexo">
+                    <legend>Sexo </legend>
+                    <input type="radio" name="tsexo" id="cmasc" /> <label for="cmasc"> Masculino</label>
+                    <input type="radio" name="tsexo" id="cfem" /> <label for="cfem">Feminino</label>
+                </fieldset>
+                <p>Data de Nascimento: <input type="date" name="tNasc" id="cNasc" />
+
+                </p>
+            </fieldset>
+
+            <p id="endereco">
+                <Legend>Endereço do Usuário</Legend>
+                <p><label for="cRua">Logradouro:</label>
+                    <input type="text" name="tRua" id="cRua" size="80" maxlength="8" placeholder="Rua, AV, Serv, Trav, ..."></p>''
+                <label for="cNum">Número:</label>
+                <input type="number" name="tNum" id="cNum" min="0" max="9999">
+
+                <p><label for="cEst">Estado:</label>
+                    <select>
+                <OPtgroup label="Região Sudeste"> 
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP" >São Paulo</option>
+                    <option value="MG">MInas Gerais</option>
+                  </OPtgroup>
+                    
+                 <optgroup label="Região Sul">
+                    <option value="PR">Paraná</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="RS">Rio grande do Sul</option>
+
+                 </optgroup>
+                    
+                </select></p>
+
+                <p><label for="cCid">Cidade:</label>
+                    <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades" /></p>
+                <datalista id="cidades">
+                    <option value="Rio de Janeiro"></option>
+                    <option value="Nova Iguaçu"></option>
+                    <option value="Belfor Roxo"></option>
+                    <option value="Niteroi"></option>
+                </datalista>
+                </fieldset>
+
+                <fieldset id="mensagem">
+                    <legend>Mensagem do Usuário</legend>
+                    <p><label for="cUrg">Grau de Urgência:</label> Mín
+                        <input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2" />Máx</p>
+                    <p><label for="cMsg">Mensagem:</label>
+                        <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+                </fieldset>
+
+                <fieldset id="pedido">
+                    <legend>Quero um Google Glass</legend>
+                    <p><input type="checkbox" name="tPed" id="cPed" checked>
+                        <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+
+                    <p><label for="cCor">Cor:</label>
+                        <input type="color" name="cCor" id="cCor" valeu="0000FF" /></p>
+
+                    <p><label for="cQtd">Quantidade:</label>
+                        <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"></p>
+
+                    <p><label for="cTot">Preço Total:</label> R$
+                        <input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly></p>
+                </fieldset>
+                <input type="image" name="tEnviar" src="_imagens/botao-enviar.png" />
+
+        </form>
+
+
+        <footer id="rodape">
+
+            <p><br> Copyright 2013 &copy; - by Gustavo <br/>
+                <a href="http://facebook.com/cursoemvideo" target="_blank">Facebook | </a>
+                <a href="http://twitter.com/cursoemvideo" target="_blank">Twitter</a> </p>
+        </footer>
+    </div>
+
+
+</body>
